@@ -18,26 +18,26 @@ CREATE TABLE IF NOT EXISTS Creator_Platform.Creators(
 );
 
 CREATE TABLE IF NOT EXISTS Creator_Platform.Subscription_Tiers(
-    Tier_id int PRIMARY KEY AUTO_INCREMENT,
+    Tier_ID int PRIMARY KEY AUTO_INCREMENT,
     Creator_ID int not null,
     Tier_Name varchar(45) not null,
     Price_Cents int not null,
     Details varchar(255),
-    Created_at TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP,
     Subscriber_Count int null,
     Post_count int null,
+    Created_at TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (Creator_ID) REFERENCES Creator_Platform.Creators(Creator_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Creator_Platform.Posts(
-    Post_id int PRIMARY KEY AUTO_INCREMENT,
+    Post_ID int PRIMARY KEY AUTO_INCREMENT,
     Creator_ID int not null,
-    Tier_id int null,
+    Tier_ID int null,
     Title varchar(255) not null,
     Body text not null,
     Visibility ENUM('public','subscribers','tier') DEFAULT 'public',
-    Created_at TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP,
+    Created_At TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (Creator_ID) REFERENCES Creator_Platform.Creators(Creator_ID) ON DELETE CASCADE,
-    FOREIGN KEY (Tier_id) REFERENCES Creator_Platform.Subscription_Tiers(tier_id) ON DELETE SET NULL
+    FOREIGN KEY (Tier_ID) REFERENCES Creator_Platform.Subscription_Tiers(Tier_ID) ON DELETE SET NULL
 );
 

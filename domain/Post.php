@@ -1,13 +1,13 @@
 <?php
 
 class Post {
-    public $userId;
+    public $creator_id;
     public $title;
     public $body;
 
-    public function __construct($userId, $title, $body) {
-        $this->userId = $userId;
-        $this->title  = $title;
-        $this->body   = $body;
+    public function __construct($creator_id, $title, $body) {
+        $this->creator_id = $creator_id;
+        $this->title = $title;
+        $this->body = $body;
     }
 }

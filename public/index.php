@@ -6,6 +6,9 @@ $controller = new PostController();
 // Determine current user (prototype mode)
 $currentUserId = isset($_GET['user']) ? intval($_GET['user']) : 1;
 
+$user1 = "creatorUser";
+$user1 = "normalUser";
+
 // Handle create post form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'] ?? '';
@@ -35,18 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <hr>
 
-<h3>Logged in as: User <?= $currentUserId ?></h3>
+<h3>Logged in as: <?php echo $currentUserId == 1 ? "creatorUser" : "normalUser"; ?></h3>
 
 <?php if ($currentUserId === 1): ?>
     <!-- POST CREATION FORM -->
     <h3>Create Post</h3>
     <form method="POST">
-        <input type="text" name="title" placeholder="Title" required><br><br>
-        <textarea name="body" placeholder="Write something..." required></textarea><br><br>
-        <button type="submit">Create Post</button>
-    </form>
+    Title: <br>
+    <input type="text" name="title" placeholder="Title" required><br><br>
+
+    Body: <br>
+    <textarea name="body" placeholder="Write something..." required></textarea><br><br>
+
+    <button type="submit">Create Post</button>
+</form>
 <?php else: ?>
-    <p>You are a normal user. You cannot create posts.</p>
+    <p>You are not a creator. You cannot create posts.</p>
 <?php endif; ?>
 
 <hr>
@@ -60,7 +67,7 @@ foreach ($posts as $post) {
     echo "<div style='margin-bottom:15px;padding:10px;border:1px solid black;'>";
     echo "<strong>{$post['title']}</strong><br>";
     echo "{$post['body']}<br>";
-    echo "<small>Posted by User {$post['user_id']} on {$post['created_at']}</small>";
+    echo "<small>Posted by User {$post['creator_id']} on {$post['created_at']}</small>";
     echo "</div>";
 }
 ?>

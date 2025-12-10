@@ -10,10 +10,10 @@ class PostService {
         $this->repo = new PostRepository();
     }
 
-    public function createPost($userId, $title, $body) {
+    public function createPost($creatorId, $title, $body) {
 
         // Domain model
-        $post = new Post($userId, $title, $body);
+        $post = new Post($creatorId, $title, $body);
 
         // Save
         return $this->repo->save($post);
