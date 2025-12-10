@@ -33,7 +33,17 @@ Only need to install these components:
 - start the "Apache" Module
 - start the "MySQL" Module
 
-6. To open in broswer type
+6. Go to your browser and visit
+- (only the first time)
+  ```bash
+  http://localhost/Creator_Platform/sql/
+  ```
+  and choose 
+  - DBSetup to build the tables
+  - SampleData to populate the schema with data
+  - Optionally clearTable to delete database
+
+- Or if already set up go directly to:
   ```bash
   http://localhost/Creator_Platform/public/
   ```
