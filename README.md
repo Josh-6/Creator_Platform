@@ -40,7 +40,7 @@ Only need to install these components:
   ```
   and choose 
   - DBSetup to build the tables
-  - SampleData to populate the schema with data
+  - SampleData to populate the schema with data (Must for prototype)
   - Optionally clearTable to delete database
 
 - Or if already set up go directly to:
