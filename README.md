@@ -48,6 +48,6 @@ Only need to install these components:
   http://localhost/Creator_Platform/public/
   ```
 # Authors
-Ayman Sadek 
-Joshua Barajas 
-Wonjun Kim
+- Ayman Sadek 
+- Joshua Barajas 
+- Wonjun Kim
