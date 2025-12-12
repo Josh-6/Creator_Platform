@@ -29,7 +29,7 @@ Only need to install these components:
 - Mac → /Applications/XAMPP/htdocs/Creator_Platform
 - Linux → /opt/lampp/htdocs/Creator_Platform
 
-5. Using XAMPP App
+5. Open XAMPP Controll Panel
 - start the "Apache" Module
 - start the "MySQL" Module
 
