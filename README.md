@@ -33,7 +33,7 @@ Only need to install these components:
 - start the "Apache" Module
 - start the "MySQL" Module
 
-6. Go to your browser and visit
+6. Go to your browser and visit (May need to disable some setting to work on mac)
 - (only the first time)
   ```bash
   http://localhost/Creator_Platform/sql/
