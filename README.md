@@ -47,7 +47,7 @@ Only need to install these components:
   ```bash
   http://localhost/Creator_Platform/public/
   ```
-#Authors
+# Authors
 Ayman Sadek 
 Joshua Barajas 
 Wonjun Kim
